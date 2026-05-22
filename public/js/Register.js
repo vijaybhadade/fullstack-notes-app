@@ -2,7 +2,7 @@ const form = document.querySelector('#Form');
 const login = document.querySelector('#Login');
 
 login.addEventListener('click', () => {
-    window.location.href = "Login.html";
+    window.location.href = "login.html";
 });
 
 form.addEventListener('submit', async function (event) {

@@ -31,7 +31,7 @@ form.addEventListener("submit", function (e) {
       localStorage.setItem("token", data.token);
 
       //  redirect and STOP
-      window.location.href = "./DashBoard.html";
+      window.location.href = "./dashBoard.html";
     })
     .catch(err => {
       console.log("Error:", err.message);

@@ -75,13 +75,13 @@ function renderNotes(notesArray) {
 
 // Protect dashboard
 if (!token) {
-    window.location.href = "/Form.html";
+    window.location.href = "/login.html";
 }
 
 // Logout
 function logout() {
     localStorage.removeItem("token");
-    window.location.href = "/Form.html";
+    window.location.href = "/login.html";
 }
 
 // Add or Update Notes
