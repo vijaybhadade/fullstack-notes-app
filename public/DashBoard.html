@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="css/DashBoard.css">
+    </head>
+    <body>
+        <p>Manage your personal notes securely</p>
+         <div class="search-area">
+            <input type="text" placeholder="Search notes.." class="search-input">
+         </div>
+        <div id="listOfNotes"></div>
+
+        <h2>Add Notes:-</h2> <br>
+        <div class="input-area">
+            <label for="title-input" style="font-weight: bolder;"> Title: <input type="text"
+                    placeholder="Add title" id="title-input"> </label> <br><br>
+            <label for="content-area" style="font-weight: bolder;"> Content: <textarea type="text"
+                    placeholder="Enter content" id="content-input" rows="7" cols="40"></textarea>
+            </label> <br>
+            <div class="btn-group">
+                <button onclick="addNote()" id="Add-btn">Add notes </button>
+            <button onclick="logout()" id="logout">Logout</button>
+            <button onclick="cancelEdit()" id="Cancel-btn">Cancel</button>
+            </div>
+            
+        </div>
+
+        
+        
+
+        <script src="js/DashBoard.js"></script>
+    </body>
+</html>
