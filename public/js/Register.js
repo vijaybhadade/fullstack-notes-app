@@ -6,7 +6,7 @@ login.addEventListener('click', () => {
 });
 
 form.addEventListener('submit', async function (event) {
-    event.preventDefault();
+    event.preventDefault(); // 
 
     const username = document.querySelector('#Username').value.trim();
     const email = document.querySelector('#Email').value.trim();
@@ -23,31 +23,27 @@ form.addEventListener('submit', async function (event) {
         alert("Passwords do not match");
         return;
     }
-    
 
     try {
-        const response = await fetch("http://localhost:3000/users/register", {
-            method: "POST",
+        const response = await fetch("/users/register", {   
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ username, email, age, password })
         });
 
-
         if (response.ok) {
             const data = await response.json();
             console.log(data);
             alert("User registered successfully");
             form.reset();
-        }
-        else {
+        } else {
             const errorMessage = await response.text();
             alert(errorMessage);
         }
 
     } catch (error) {
         console.log(error.message);
-        alert("server Error");
+        alert("Server Error");
     }
 });
